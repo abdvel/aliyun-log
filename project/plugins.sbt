@@ -1,0 +1,7 @@
+addSbtPlugin("io.spray"         % "sbt-revolver"         % "0.9.1")
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.9.2")
+addSbtPlugin("org.scalameta"    % "sbt-scalafmt"         % "2.3.2")
+addSbtPlugin("ch.epfl.scala"    % "sbt-scalafix"         % "0.9.16")
+addSbtPlugin("org.xerial.sbt"   % "sbt-pack"             % "0.12")
+addSbtPlugin("org.xerial.sbt"   % "sbt-sonatype"         % "2.3")
+addSbtPlugin("com.jsuereth"     % "sbt-pgp"              % "1.1.1")
