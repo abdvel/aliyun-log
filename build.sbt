@@ -16,7 +16,7 @@ publishTo := Some(
     Opts.resolver.sonatypeStaging
 )
 
-scalaVersion := "2.13.2"
+scalaVersion := "2.12.9"
 crossScalaVersions := Nil
 
 libraryDependencies ++= Seq(
