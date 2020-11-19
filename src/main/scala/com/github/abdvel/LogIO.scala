@@ -2,7 +2,6 @@ package com.github.abdvel
 
 import com.aliyun.openservices.log.Client
 import com.aliyun.openservices.log.common.LogItem
-import com.aliyun.openservices.log.exception.LogException
 import com.aliyun.openservices.log.response.PutLogsResponse
 import com.github.abdvel.model.`type`.LogLevel
 import com.github.abdvel.model.config.Config
@@ -22,13 +21,7 @@ class LogIO(config: Config)(implicit ec: ExecutionContext) {
     logs.foreach { case (key, value) => logItem.PushBack(key, value) }
     logGroup.add(logItem)
 
-    Future {
-      try {
-        client.PutLogs(config.project, config.logStore, config.topic, logGroup, "")
-      } catch {
-        case e: LogException => throw e
-      }
-    }
+    Future(client.PutLogs(config.project, config.logStore, config.topic, logGroup, ""))
   }
 
   def error(traceId: String, logs: Map[String, String]): Future[PutLogsResponse] = {
@@ -40,12 +33,6 @@ class LogIO(config: Config)(implicit ec: ExecutionContext) {
     logs.foreach { case (key, value) => logItem.PushBack(key, value) }
     logGroup.add(logItem)
 
-    Future {
-      try {
-        client.PutLogs(config.project, config.logStore, config.topic, logGroup, "")
-      } catch {
-        case e: LogException => throw e
-      }
-    }
+    Future(client.PutLogs(config.project, config.logStore, config.topic, logGroup, ""))
   }
 }
