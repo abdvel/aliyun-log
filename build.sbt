@@ -1,6 +1,6 @@
 name := "aliyun-log"
 
-version := "2.0.0"
+version := "2.0.1"
 
 organization := "com.github.abdvel"
 homepage := Some(url("https://github.com/abdvel/aliyun-log"))
