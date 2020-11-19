@@ -1,6 +1,6 @@
 name := "aliyun-log"
 
-version := "2.0.0"
+version := "2.0.1"
 
 organization := "com.github.abdvel"
 homepage := Some(url("https://github.com/abdvel/aliyun-log"))
@@ -16,7 +16,7 @@ publishTo := Some(
     Opts.resolver.sonatypeStaging
 )
 
-scalaVersion := "2.11.12"
+scalaVersion := "2.13.2"
 crossScalaVersions := Nil
 
 libraryDependencies ++= Seq(
